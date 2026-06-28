@@ -1,33 +1,43 @@
 package urlshortener.app.repository;
 
-import ai.grakn.redismock.RedisServer;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import redis.clients.jedis.Jedis;
 
-import java.io.IOException;
+import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class URLRepositoryTest {
-    private static RedisServer server;
-    @BeforeClass public static void setupServer() throws IOException {
-        server = RedisServer.newRedisServer(6789);
-        server.start();
-    }
+class URLRepositoryTest {
 
-    @AfterClass public static void shutdownServer() throws IOException {
-        server.stop();
+    private URLRepository urlRepository;
+    private Jedis jedis;
+
+    @BeforeEach
+    void setUp() {
+        jedis = new Jedis("localhost", 6379);
+        urlRepository = new URLRepository(jedis);
     }
 
     @Test
-    public void test_incrementID_StartsAt0AndIncrements() {
-        URLRepository urlRepository = new URLRepository(new Jedis(server.getHost(), server.getBindPort())
-                , "id", "url:");
-        for (long expectedId = 0L; expectedId < 50L; ++expectedId) {
-            long actualId = urlRepository.incrementID();
-            assertEquals(expectedId, actualId);
-        }
+    void getNextId_incrementsAndReturnsValue() {
+        Long first = urlRepository.getNextId();
+        Long second = urlRepository.getNextId();
+        assertEquals(first + 1, second);
+    }
+
+    @Test
+    void save_and_findByShortId_roundTrip() {
+        urlRepository.save("testKey123", "https://example.com");
+        Optional<String> result = urlRepository.findByShortId("testKey123");
+        assertTrue(result.isPresent());
+        assertEquals("https://example.com", result.get());
+    }
+
+    @Test
+    void findByShortId_returnsEmptyWhenNotFound() {
+        Optional<String> result = urlRepository.findByShortId("doesNotExist999");
+        assertTrue(result.isEmpty());
     }
 }
