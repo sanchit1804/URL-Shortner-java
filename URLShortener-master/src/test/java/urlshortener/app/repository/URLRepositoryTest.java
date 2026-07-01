@@ -2,7 +2,7 @@ package urlshortener.app.repository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 import java.util.Optional;
 
@@ -12,12 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class URLRepositoryTest {
 
     private URLRepository urlRepository;
-    private Jedis jedis;
 
     @BeforeEach
     void setUp() {
-        jedis = new Jedis("localhost", 6379);
-        urlRepository = new URLRepository(jedis);
+        JedisPool pool = new JedisPool("localhost", 6379);
+        urlRepository = new URLRepository(pool);
     }
 
     @Test
@@ -39,5 +38,13 @@ class URLRepositoryTest {
     void findByShortId_returnsEmptyWhenNotFound() {
         Optional<String> result = urlRepository.findByShortId("doesNotExist999");
         assertTrue(result.isEmpty());
+    }
+
+    @Test
+    void findShortIdByLongUrl_returnsExistingShortId() {
+        urlRepository.save("testKey456", "https://example.org");
+        Optional<String> result = urlRepository.findShortIdByLongUrl("https://example.org");
+        assertTrue(result.isPresent());
+        assertEquals("testKey456", result.get());
     }
 }

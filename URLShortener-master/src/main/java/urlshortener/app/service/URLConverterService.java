@@ -8,12 +8,12 @@ import urlshortener.app.common.URLValidator;
 import urlshortener.app.exception.InvalidURLException;
 import urlshortener.app.exception.URLNotFoundException;
 import urlshortener.app.repository.URLRepository;
+import java.util.Optional;
 
 @Service
 public class URLConverterService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(URLConverterService.class);
-
     private final URLRepository urlRepository;
 
     public URLConverterService(URLRepository urlRepository) {
@@ -25,9 +25,14 @@ public class URLConverterService {
             throw new InvalidURLException("Please enter a valid URL: " + longUrl);
         }
 
+        Optional<String> existingShortId = urlRepository.findShortIdByLongUrl(longUrl);
+        if (existingShortId.isPresent()) {
+            LOGGER.info("URL already shortened, returning existing shortId={}", existingShortId.get());
+            return buildShortUrl(baseUrl, existingShortId.get());
+        }
+
         Long nextId = urlRepository.getNextId();
         String shortId = IDConverter.createUniqueID(nextId);
-
         urlRepository.save(shortId, longUrl);
         LOGGER.info("Shortened {} -> {}", longUrl, shortId);
 
