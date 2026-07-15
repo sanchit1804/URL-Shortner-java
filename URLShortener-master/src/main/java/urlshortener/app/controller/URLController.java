@@ -28,11 +28,10 @@ public class URLController {
                                                         HttpServletRequest request) {
         LOGGER.info("Received url to shorten: {}", shortenRequest.getUrl());
 
-        String baseUrl = request.getRequestURL().toString();
-        String shortUrl = urlConverterService.shortenURL(baseUrl, shortenRequest.getUrl());
+        ShortenResponse shortUrlResponse = urlConverterService.shortenURL(shortenRequest.getUrl());
 
-        LOGGER.info("Shortened url: {}", shortUrl);
-        return ResponseEntity.ok(new ShortenResponse(shortUrl));
+        LOGGER.info("Shortened url: {}", shortUrlResponse.getShortUrl());
+        return ResponseEntity.ok(shortUrlResponse);
     }
 
     @GetMapping(value = "/{id}")

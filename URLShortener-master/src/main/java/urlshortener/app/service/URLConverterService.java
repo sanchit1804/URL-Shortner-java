@@ -2,9 +2,11 @@ package urlshortener.app.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import urlshortener.app.common.IDConverter;
 import urlshortener.app.common.URLValidator;
+import urlshortener.app.dto.ShortenResponse;
 import urlshortener.app.exception.InvalidURLException;
 import urlshortener.app.exception.URLNotFoundException;
 import urlshortener.app.repository.URLRepository;
@@ -14,13 +16,17 @@ import java.util.Optional;
 public class URLConverterService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(URLConverterService.class);
+
     private final URLRepository urlRepository;
+
+    @Value("${app.base-url:http://localhost:8080}")
+    private String baseUrl;
 
     public URLConverterService(URLRepository urlRepository) {
         this.urlRepository = urlRepository;
     }
 
-    public String shortenURL(String baseUrl, String longUrl) {
+    public ShortenResponse shortenURL(String longUrl) {
         if (!URLValidator.INSTANCE.validateURL(longUrl)) {
             throw new InvalidURLException("Please enter a valid URL: " + longUrl);
         }
@@ -28,7 +34,7 @@ public class URLConverterService {
         Optional<String> existingShortId = urlRepository.findShortIdByLongUrl(longUrl);
         if (existingShortId.isPresent()) {
             LOGGER.info("URL already shortened, returning existing shortId={}", existingShortId.get());
-            return buildShortUrl(baseUrl, existingShortId.get());
+            return new ShortenResponse(buildShortUrl(existingShortId.get()));
         }
 
         Long nextId = urlRepository.getNextId();
@@ -36,7 +42,7 @@ public class URLConverterService {
         urlRepository.save(shortId, longUrl);
         LOGGER.info("Shortened {} -> {}", longUrl, shortId);
 
-        return buildShortUrl(baseUrl, shortId);
+        return new ShortenResponse(buildShortUrl(shortId));
     }
 
     public String getLongURLFromID(String shortId) {
@@ -44,13 +50,8 @@ public class URLConverterService {
                 .orElseThrow(() -> new URLNotFoundException("No URL found for id: " + shortId));
     }
 
-    private String buildShortUrl(String baseUrl, String shortId) {
-        String root = baseUrl.endsWith("/shortener")
-                ? baseUrl.substring(0, baseUrl.length() - "/shortener".length())
-                : baseUrl;
-        if (!root.endsWith("/")) {
-            root += "/";
-        }
-        return root + shortId;
+    private String buildShortUrl(String shortId) {
+        String base = baseUrl.endsWith("/") ? baseUrl.substring(0, baseUrl.length() - 1) : baseUrl;
+        return base + "/" + shortId;
     }
 }

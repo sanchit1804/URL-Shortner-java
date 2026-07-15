@@ -1,151 +1,104 @@
-2026-07-15T17:06:46.314+05:30  INFO 13264 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13264 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:06:46.318+05:30 DEBUG 13264 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:06:46.319+05:30  INFO 13264 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:06:46.722+05:30  INFO 13264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:06:46.727+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:06:46.728+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:06:46.748+05:30  INFO 13264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:06:46.749+05:30  INFO 13264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 410 ms
-2026-07-15T17:06:46.800+05:30  WARN 13264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-07-15T17:06:46.800+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-07-15T17:06:46.809+05:30  INFO 13264 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-15T17:06:46.814+05:30 ERROR 13264 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
-
-2026-07-15T17:08:45.974+05:30  INFO 13599 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13599 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:08:45.975+05:30 DEBUG 13599 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:08:45.975+05:30  INFO 13599 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:08:46.355+05:30  INFO 13599 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:08:46.360+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:08:46.360+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:08:46.383+05:30  INFO 13599 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:08:46.383+05:30  INFO 13599 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
-2026-07-15T17:08:46.437+05:30  WARN 13599 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-07-15T17:08:46.438+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-07-15T17:08:46.446+05:30  INFO 13599 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-15T17:08:46.452+05:30 ERROR 13599 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
-
-2026-07-15T17:12:13.187+05:30  INFO 13730 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13730 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:12:13.188+05:30 DEBUG 13730 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:12:13.188+05:30  INFO 13730 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:12:13.554+05:30  INFO 13730 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:12:13.559+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:12:13.559+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:12:13.582+05:30  INFO 13730 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:12:13.582+05:30  INFO 13730 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
-2026-07-15T17:12:13.644+05:30  WARN 13730 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-07-15T17:12:13.645+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-07-15T17:12:13.652+05:30  INFO 13730 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-15T17:12:13.658+05:30 ERROR 13730 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
-
-2026-07-15T17:13:02.125+05:30  INFO 13769 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13769 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:13:02.126+05:30 DEBUG 13769 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:13:02.127+05:30  INFO 13769 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:13:02.488+05:30  INFO 13769 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:13:02.492+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:13:02.493+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:13:02.509+05:30  INFO 13769 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:13:02.509+05:30  INFO 13769 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
-2026-07-15T17:13:02.560+05:30  WARN 13769 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-07-15T17:13:02.561+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-07-15T17:13:02.567+05:30  INFO 13769 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-15T17:13:02.573+05:30 ERROR 13769 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
-
-2026-07-15T17:13:10.992+05:30  INFO 13800 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13800 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:13:10.993+05:30 DEBUG 13800 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:13:10.994+05:30  INFO 13800 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:13:11.342+05:30  INFO 13800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:13:11.346+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:13:11.346+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:13:11.364+05:30  INFO 13800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:13:11.364+05:30  INFO 13800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
-2026-07-15T17:13:11.414+05:30  WARN 13800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
-2026-07-15T17:13:11.415+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2026-07-15T17:13:11.421+05:30  INFO 13800 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-07-15T17:13:11.427+05:30 ERROR 13800 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
-
-2026-07-15T17:17:13.532+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 14457 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
-2026-07-15T17:17:13.533+05:30 DEBUG 14457 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
-2026-07-15T17:17:13.533+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
-2026-07-15T17:17:13.895+05:30  INFO 14457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-07-15T17:17:13.900+05:30  INFO 14457 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-07-15T17:17:13.900+05:30  INFO 14457 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2026-07-15T17:17:13.920+05:30  INFO 14457 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-07-15T17:17:13.920+05:30  INFO 14457 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 371 ms
-2026-07-15T17:17:14.088+05:30  INFO 14457 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-07-15T17:17:14.110+05:30  INFO 14457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2026-07-15T17:17:14.116+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : Started URLShortenerApplication in 0.742 seconds (process running for 0.954)
+2026-07-16T00:54:26.642+05:30  INFO 27016 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 27016 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-16T00:54:26.644+05:30 DEBUG 27016 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-16T00:54:26.644+05:30  INFO 27016 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-16T00:54:27.037+05:30  INFO 27016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-16T00:54:27.041+05:30  INFO 27016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T00:54:27.041+05:30  INFO 27016 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-16T00:54:27.058+05:30  INFO 27016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-16T00:54:27.058+05:30  INFO 27016 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 395 ms
+2026-07-16T00:54:27.235+05:30  INFO 27016 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T00:54:27.256+05:30  INFO 27016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-16T00:54:27.262+05:30  INFO 27016 --- [main] u.app.URLShortenerApplication            : Started URLShortenerApplication in 0.782 seconds (process running for 0.886)
+2026-07-16T00:54:49.405+05:30  INFO 27016 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16T00:54:49.406+05:30  INFO 27016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-16T00:54:49.413+05:30  INFO 27016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-07-16T00:54:49.502+05:30  INFO 27016 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T00:54:49.546+05:30 DEBUG 27016 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> null
+2026-07-16T00:54:49.548+05:30 DEBUG 27016 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Generated next id: 19
+2026-07-16T00:54:49.549+05:30 DEBUG 27016 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Saving shortId=t -> longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T00:54:49.551+05:30  INFO 27016 --- [http-nio-8080-exec-2] u.app.service.URLConverterService        : Shortened https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T00:54:49.551+05:30  INFO 27016 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Shortened url: http://short.ly/t
+2026-07-16T00:54:53.267+05:30  INFO 27016 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T00:54:53.269+05:30 DEBUG 27016 --- [http-nio-8080-exec-3] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T00:54:53.269+05:30  INFO 27016 --- [http-nio-8080-exec-3] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T00:54:53.269+05:30  INFO 27016 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Shortened url: http://short.ly/t
+2026-07-16T01:00:33.092+05:30  INFO 27016 --- [http-nio-8080-exec-5] u.app.controller.URLController           : Received url to shorten: fasfds
+2026-07-16T01:00:39.927+05:30  INFO 27016 --- [http-nio-8080-exec-6] u.app.controller.URLController           : Received url to shorten: https://www.linkedin.com/jobs/search-results/?currentJobId=4440869662&eBP=NOT_ELIGIBLE_FOR_CHARGING&refId=%2FpaiROnecaLiNq0nF3qTrQ%3D%3D&trackingId=HRRe2Rzy%2B1trM%2BEDCk9llg%3D%3D&keywords=Associate%20Software%20Engineer%2C%20Software%20Engineer%20I%2C%20Graduate%20Software%20Engineer%2C%20Graduate%20Engineer%20Trainee%2C%20Associate%20Developer%2C%20Java%20Developer%2C%20Backend%20Developer%2C%20Software%20Developer%2C%20Junior%20Software%2C%20on-site%20or%20hybrid%20or%20remote&origin=PREFERENCES_LANDING&referralSearchId=K5%2BSb%2BC83ZWmW5PJUetYEg%3D%3D&start=25&geoId=105556991&f_TPR=r86400
+2026-07-16T01:00:39.933+05:30 DEBUG 27016 --- [http-nio-8080-exec-6] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.linkedin.com/jobs/search-results/?currentJobId=4440869662&eBP=NOT_ELIGIBLE_FOR_CHARGING&refId=%2FpaiROnecaLiNq0nF3qTrQ%3D%3D&trackingId=HRRe2Rzy%2B1trM%2BEDCk9llg%3D%3D&keywords=Associate%20Software%20Engineer%2C%20Software%20Engineer%20I%2C%20Graduate%20Software%20Engineer%2C%20Graduate%20Engineer%20Trainee%2C%20Associate%20Developer%2C%20Java%20Developer%2C%20Backend%20Developer%2C%20Software%20Developer%2C%20Junior%20Software%2C%20on-site%20or%20hybrid%20or%20remote&origin=PREFERENCES_LANDING&referralSearchId=K5%2BSb%2BC83ZWmW5PJUetYEg%3D%3D&start=25&geoId=105556991&f_TPR=r86400 -> null
+2026-07-16T01:00:39.946+05:30 DEBUG 27016 --- [http-nio-8080-exec-6] u.app.repository.URLRepository           : Generated next id: 20
+2026-07-16T01:00:39.949+05:30 DEBUG 27016 --- [http-nio-8080-exec-6] u.app.repository.URLRepository           : Saving shortId=u -> longUrl=https://www.linkedin.com/jobs/search-results/?currentJobId=4440869662&eBP=NOT_ELIGIBLE_FOR_CHARGING&refId=%2FpaiROnecaLiNq0nF3qTrQ%3D%3D&trackingId=HRRe2Rzy%2B1trM%2BEDCk9llg%3D%3D&keywords=Associate%20Software%20Engineer%2C%20Software%20Engineer%20I%2C%20Graduate%20Software%20Engineer%2C%20Graduate%20Engineer%20Trainee%2C%20Associate%20Developer%2C%20Java%20Developer%2C%20Backend%20Developer%2C%20Software%20Developer%2C%20Junior%20Software%2C%20on-site%20or%20hybrid%20or%20remote&origin=PREFERENCES_LANDING&referralSearchId=K5%2BSb%2BC83ZWmW5PJUetYEg%3D%3D&start=25&geoId=105556991&f_TPR=r86400
+2026-07-16T01:00:39.950+05:30  INFO 27016 --- [http-nio-8080-exec-6] u.app.service.URLConverterService        : Shortened https://www.linkedin.com/jobs/search-results/?currentJobId=4440869662&eBP=NOT_ELIGIBLE_FOR_CHARGING&refId=%2FpaiROnecaLiNq0nF3qTrQ%3D%3D&trackingId=HRRe2Rzy%2B1trM%2BEDCk9llg%3D%3D&keywords=Associate%20Software%20Engineer%2C%20Software%20Engineer%20I%2C%20Graduate%20Software%20Engineer%2C%20Graduate%20Engineer%20Trainee%2C%20Associate%20Developer%2C%20Java%20Developer%2C%20Backend%20Developer%2C%20Software%20Developer%2C%20Junior%20Software%2C%20on-site%20or%20hybrid%20or%20remote&origin=PREFERENCES_LANDING&referralSearchId=K5%2BSb%2BC83ZWmW5PJUetYEg%3D%3D&start=25&geoId=105556991&f_TPR=r86400 -> u
+2026-07-16T01:00:39.950+05:30  INFO 27016 --- [http-nio-8080-exec-6] u.app.controller.URLController           : Shortened url: http://short.ly/u
+2026-07-16T01:01:12.909+05:30  INFO 27016 --- [http-nio-8080-exec-7] u.app.controller.URLController           : Received url to shorten: http://short.ly/u
+2026-07-16T01:01:12.921+05:30 DEBUG 27016 --- [http-nio-8080-exec-7] u.app.repository.URLRepository           : Reverse lookup longUrl=http://short.ly/u -> null
+2026-07-16T01:01:12.932+05:30 DEBUG 27016 --- [http-nio-8080-exec-7] u.app.repository.URLRepository           : Generated next id: 21
+2026-07-16T01:01:12.933+05:30 DEBUG 27016 --- [http-nio-8080-exec-7] u.app.repository.URLRepository           : Saving shortId=v -> longUrl=http://short.ly/u
+2026-07-16T01:01:12.936+05:30  INFO 27016 --- [http-nio-8080-exec-7] u.app.service.URLConverterService        : Shortened http://short.ly/u -> v
+2026-07-16T01:01:12.937+05:30  INFO 27016 --- [http-nio-8080-exec-7] u.app.controller.URLController           : Shortened url: http://short.ly/v
+2026-07-16T01:01:39.145+05:30  INFO 27016 --- [http-nio-8080-exec-8] u.app.controller.URLController           : Received url to shorten: http://short.ly/u
+2026-07-16T01:01:39.147+05:30 DEBUG 27016 --- [http-nio-8080-exec-8] u.app.repository.URLRepository           : Reverse lookup longUrl=http://short.ly/u -> v
+2026-07-16T01:01:39.149+05:30  INFO 27016 --- [http-nio-8080-exec-8] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=v
+2026-07-16T01:01:39.149+05:30  INFO 27016 --- [http-nio-8080-exec-8] u.app.controller.URLController           : Shortened url: http://short.ly/v
+2026-07-16T01:04:19.002+05:30  INFO 28234 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 28234 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-16T01:04:19.003+05:30 DEBUG 28234 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-16T01:04:19.004+05:30  INFO 28234 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-16T01:04:19.390+05:30  INFO 28234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-16T01:04:19.394+05:30  INFO 28234 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-16T01:04:19.395+05:30  INFO 28234 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-16T01:04:19.415+05:30  INFO 28234 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-16T01:04:19.416+05:30  INFO 28234 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 393 ms
+2026-07-16T01:04:19.589+05:30  INFO 28234 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-16T01:04:19.611+05:30  INFO 28234 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-16T01:04:19.617+05:30  INFO 28234 --- [main] u.app.URLShortenerApplication            : Started URLShortenerApplication in 0.756 seconds (process running for 0.876)
+2026-07-16T01:05:04.723+05:30  INFO 28234 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-16T01:05:04.723+05:30  INFO 28234 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-16T01:05:04.724+05:30  INFO 28234 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-16T01:05:04.782+05:30  INFO 28234 --- [http-nio-8080-exec-1] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:05:04.787+05:30 DEBUG 28234 --- [http-nio-8080-exec-1] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T01:05:04.787+05:30  INFO 28234 --- [http-nio-8080-exec-1] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T01:05:04.787+05:30  INFO 28234 --- [http-nio-8080-exec-1] u.app.controller.URLController           : Shortened url: http://localhost:8080/t
+2026-07-16T01:05:07.840+05:30  INFO 28234 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Received shortened id to redirect: t
+2026-07-16T01:05:07.841+05:30 DEBUG 28234 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Lookup shortId=t -> https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:05:07.841+05:30  INFO 28234 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Resolved to original URL: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:05:18.267+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Received url to shorten: https://www.foundit.in/seeker/dashboard
+2026-07-16T01:05:18.276+05:30 DEBUG 28234 --- [http-nio-8080-exec-3] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.foundit.in/seeker/dashboard -> null
+2026-07-16T01:05:18.282+05:30 DEBUG 28234 --- [http-nio-8080-exec-3] u.app.repository.URLRepository           : Generated next id: 22
+2026-07-16T01:05:18.285+05:30 DEBUG 28234 --- [http-nio-8080-exec-3] u.app.repository.URLRepository           : Saving shortId=w -> longUrl=https://www.foundit.in/seeker/dashboard
+2026-07-16T01:05:18.286+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.service.URLConverterService        : Shortened https://www.foundit.in/seeker/dashboard -> w
+2026-07-16T01:05:18.286+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Shortened url: http://localhost:8080/w
+2026-07-16T01:09:40.584+05:30  INFO 28234 --- [http-nio-8080-exec-6] u.app.controller.URLController           : Received url to shorten: https://www.foundit.in/seeker/dashboard
+2026-07-16T01:09:40.614+05:30 DEBUG 28234 --- [http-nio-8080-exec-6] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.foundit.in/seeker/dashboard -> w
+2026-07-16T01:09:40.614+05:30  INFO 28234 --- [http-nio-8080-exec-6] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=w
+2026-07-16T01:09:40.614+05:30  INFO 28234 --- [http-nio-8080-exec-6] u.app.controller.URLController           : Shortened url: http://localhost:8080/w
+2026-07-16T01:10:21.340+05:30  INFO 28234 --- [http-nio-8080-exec-7] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:10:21.363+05:30 DEBUG 28234 --- [http-nio-8080-exec-7] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T01:10:21.364+05:30  INFO 28234 --- [http-nio-8080-exec-7] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T01:10:21.364+05:30  INFO 28234 --- [http-nio-8080-exec-7] u.app.controller.URLController           : Shortened url: http://localhost:8080/t
+2026-07-16T01:10:25.498+05:30  INFO 28234 --- [http-nio-8080-exec-8] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:10:25.499+05:30 DEBUG 28234 --- [http-nio-8080-exec-8] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T01:10:25.500+05:30  INFO 28234 --- [http-nio-8080-exec-8] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T01:10:25.500+05:30  INFO 28234 --- [http-nio-8080-exec-8] u.app.controller.URLController           : Shortened url: http://localhost:8080/t
+2026-07-16T01:10:28.315+05:30  INFO 28234 --- [http-nio-8080-exec-9] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:10:28.321+05:30 DEBUG 28234 --- [http-nio-8080-exec-9] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T01:10:28.321+05:30  INFO 28234 --- [http-nio-8080-exec-9] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T01:10:28.321+05:30  INFO 28234 --- [http-nio-8080-exec-9] u.app.controller.URLController           : Shortened url: http://localhost:8080/t
+2026-07-16T01:10:35.456+05:30  INFO 28234 --- [http-nio-8080-exec-10] u.app.controller.URLController           : Received url to shorten: https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc
+2026-07-16T01:10:35.470+05:30 DEBUG 28234 --- [http-nio-8080-exec-10] u.app.repository.URLRepository           : Reverse lookup longUrl=https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc -> null
+2026-07-16T01:10:35.478+05:30 DEBUG 28234 --- [http-nio-8080-exec-10] u.app.repository.URLRepository           : Generated next id: 23
+2026-07-16T01:10:35.480+05:30 DEBUG 28234 --- [http-nio-8080-exec-10] u.app.repository.URLRepository           : Saving shortId=x -> longUrl=https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc
+2026-07-16T01:10:35.483+05:30  INFO 28234 --- [http-nio-8080-exec-10] u.app.service.URLConverterService        : Shortened https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc -> x
+2026-07-16T01:10:35.483+05:30  INFO 28234 --- [http-nio-8080-exec-10] u.app.controller.URLController           : Shortened url: http://localhost:8080/x
+2026-07-16T01:13:05.495+05:30  INFO 28234 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Received url to shorten: https://claude.ai/chat/d972e920-7782-46a5-8ab8-12a16952d2df
+2026-07-16T01:13:05.516+05:30 DEBUG 28234 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Reverse lookup longUrl=https://claude.ai/chat/d972e920-7782-46a5-8ab8-12a16952d2df -> null
+2026-07-16T01:13:05.517+05:30 DEBUG 28234 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Generated next id: 24
+2026-07-16T01:13:05.518+05:30 DEBUG 28234 --- [http-nio-8080-exec-2] u.app.repository.URLRepository           : Saving shortId=y -> longUrl=https://claude.ai/chat/d972e920-7782-46a5-8ab8-12a16952d2df
+2026-07-16T01:13:05.518+05:30  INFO 28234 --- [http-nio-8080-exec-2] u.app.service.URLConverterService        : Shortened https://claude.ai/chat/d972e920-7782-46a5-8ab8-12a16952d2df -> y
+2026-07-16T01:13:05.518+05:30  INFO 28234 --- [http-nio-8080-exec-2] u.app.controller.URLController           : Shortened url: http://localhost:8080/y
+2026-07-16T01:13:12.636+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Received url to shorten: https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc
+2026-07-16T01:13:12.637+05:30 DEBUG 28234 --- [http-nio-8080-exec-3] u.app.repository.URLRepository           : Reverse lookup longUrl=https://mail.google.com/mail/u/0/#inbox/FMfcgzQhVNdBvGCfFjJkzgbRVgVkPqbc -> x
+2026-07-16T01:13:12.638+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=x
+2026-07-16T01:13:12.638+05:30  INFO 28234 --- [http-nio-8080-exec-3] u.app.controller.URLController           : Shortened url: http://localhost:8080/x
+2026-07-16T01:15:49.503+05:30  INFO 28234 --- [http-nio-8080-exec-5] u.app.controller.URLController           : Received url to shorten: https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8
+2026-07-16T01:15:49.506+05:30 DEBUG 28234 --- [http-nio-8080-exec-5] u.app.repository.URLRepository           : Reverse lookup longUrl=https://www.google.com/search?q=final+of+fifa+world+cup+2026&rlz=1C5KXLH_enIN1216IN1216&oq=fianl+&gs_lcrp=EgZjaHJvbWUqEggBEAAYChiDARixAxiABBiKBTIGCAAQRRg5MhIIARAAGAoYgwEYsQMYgAQYigUyDggCEC4YChgLGLEDGIAEMhIIAxAAGAoYgwEYsQMYgAQYigUyDggEEAAYChgLGLEDGIAEMhIIBRAAGAoYgwEYsQMYgAQYigUyDggGEAAYChgLGLEDGIAEMhIIBxAAGAoYgwEYsQMYgAQYigUyDggIEC4YChgLGLEDGIAEMgsICRAAGAoYCxiABNIBCDIxNjJqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8 -> t
+2026-07-16T01:15:49.507+05:30  INFO 28234 --- [http-nio-8080-exec-5] u.app.service.URLConverterService        : URL already shortened, returning existing shortId=t
+2026-07-16T01:15:49.507+05:30  INFO 28234 --- [http-nio-8080-exec-5] u.app.controller.URLController           : Shortened url: http://localhost:8080/t
