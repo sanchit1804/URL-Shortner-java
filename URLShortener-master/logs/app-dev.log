@@ -1,0 +1,151 @@
+2026-07-15T17:06:46.314+05:30  INFO 13264 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13264 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:06:46.318+05:30 DEBUG 13264 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:06:46.319+05:30  INFO 13264 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:06:46.722+05:30  INFO 13264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:06:46.727+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:06:46.728+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:06:46.748+05:30  INFO 13264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:06:46.749+05:30  INFO 13264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 410 ms
+2026-07-15T17:06:46.800+05:30  WARN 13264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-15T17:06:46.800+05:30  INFO 13264 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-15T17:06:46.809+05:30  INFO 13264 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-15T17:06:46.814+05:30 ERROR 13264 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2026-07-15T17:08:45.974+05:30  INFO 13599 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13599 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:08:45.975+05:30 DEBUG 13599 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:08:45.975+05:30  INFO 13599 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:08:46.355+05:30  INFO 13599 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:08:46.360+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:08:46.360+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:08:46.383+05:30  INFO 13599 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:08:46.383+05:30  INFO 13599 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 391 ms
+2026-07-15T17:08:46.437+05:30  WARN 13599 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-15T17:08:46.438+05:30  INFO 13599 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-15T17:08:46.446+05:30  INFO 13599 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-15T17:08:46.452+05:30 ERROR 13599 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2026-07-15T17:12:13.187+05:30  INFO 13730 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13730 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:12:13.188+05:30 DEBUG 13730 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:12:13.188+05:30  INFO 13730 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:12:13.554+05:30  INFO 13730 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:12:13.559+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:12:13.559+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:12:13.582+05:30  INFO 13730 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:12:13.582+05:30  INFO 13730 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 375 ms
+2026-07-15T17:12:13.644+05:30  WARN 13730 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-15T17:12:13.645+05:30  INFO 13730 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-15T17:12:13.652+05:30  INFO 13730 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-15T17:12:13.658+05:30 ERROR 13730 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2026-07-15T17:13:02.125+05:30  INFO 13769 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13769 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:13:02.126+05:30 DEBUG 13769 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:13:02.127+05:30  INFO 13769 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:13:02.488+05:30  INFO 13769 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:13:02.492+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:13:02.493+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:13:02.509+05:30  INFO 13769 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:13:02.509+05:30  INFO 13769 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
+2026-07-15T17:13:02.560+05:30  WARN 13769 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-15T17:13:02.561+05:30  INFO 13769 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-15T17:13:02.567+05:30  INFO 13769 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-15T17:13:02.573+05:30 ERROR 13769 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2026-07-15T17:13:10.992+05:30  INFO 13800 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 13800 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:13:10.993+05:30 DEBUG 13800 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:13:10.994+05:30  INFO 13800 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:13:11.342+05:30  INFO 13800 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:13:11.346+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:13:11.346+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:13:11.364+05:30  INFO 13800 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:13:11.364+05:30  INFO 13800 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2026-07-15T17:13:11.414+05:30  WARN 13800 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'URLController' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/controller/URLController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLConverterService' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/service/URLConverterService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'URLRepository' defined in file [/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main/urlshortener/app/repository/URLRepository.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'redis.clients.jedis.JedisPool' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-07-15T17:13:11.415+05:30  INFO 13800 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-07-15T17:13:11.421+05:30  INFO 13800 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-15T17:13:11.427+05:30 ERROR 13800 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in urlshortener.app.repository.URLRepository required a bean of type 'redis.clients.jedis.JedisPool' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'redis.clients.jedis.JedisPool' in your configuration.
+
+2026-07-15T17:17:13.532+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : Starting URLShortenerApplication using Java 17.0.19 with PID 14457 (/Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master/build/classes/java/main started by san in /Users/san/Downloads/URl/URL-Shortner-java/URLShortener-master)
+2026-07-15T17:17:13.533+05:30 DEBUG 14457 --- [main] u.app.URLShortenerApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2026-07-15T17:17:13.533+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : The following 1 profile is active: "dev"
+2026-07-15T17:17:13.895+05:30  INFO 14457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-15T17:17:13.900+05:30  INFO 14457 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-15T17:17:13.900+05:30  INFO 14457 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-07-15T17:17:13.920+05:30  INFO 14457 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-15T17:17:13.920+05:30  INFO 14457 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 371 ms
+2026-07-15T17:17:14.088+05:30  INFO 14457 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-15T17:17:14.110+05:30  INFO 14457 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-15T17:17:14.116+05:30  INFO 14457 --- [main] u.app.URLShortenerApplication            : Started URLShortenerApplication in 0.742 seconds (process running for 0.954)

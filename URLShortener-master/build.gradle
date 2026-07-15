@@ -30,6 +30,7 @@ dependencies {
     // ai.grakn:redis-mock is abandoned and incompatible with modern Jedis/Boot 3.
     // For Redis-backed tests, use Testcontainers instead:
     // testImplementation 'org.testcontainers:junit-jupiter:1.20.1'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
 
 tasks.named('test') {
