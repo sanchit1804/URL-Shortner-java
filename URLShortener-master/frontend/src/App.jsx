@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import axios from "axios";
 
@@ -6,7 +5,7 @@ const API_BASE = "http://localhost:8080";
 const API_KEY = "dev-key-123";
 
 function timeAgo(date) {
-  const seconds = Math.floor((new Date() - date) / 1000);
+  const seconds = Math.floor((new Date() - new Date(date)) / 1000);
   if (seconds < 60) return "just now";
   if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
   if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`;
@@ -23,10 +22,20 @@ export default function App() {
   const [shortUrl, setShortUrl] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [history, setHistory] = useState([]);
   const [copied, setCopied] = useState(false);
   const [activeNav, setActiveNav] = useState("dashboard");
-  const [totalCount, setTotalCount] = useState(0);
+
+  const [history, setHistory] = useState(() => {
+    try {
+      const saved = localStorage.getItem("url-history");
+      return saved ? JSON.parse(saved) : [];
+    } catch { return []; }
+  });
+
+  const [totalCount, setTotalCount] = useState(() => {
+    try { return parseInt(localStorage.getItem("url-count") || "0"); }
+    catch { return 0; }
+  });
 
   const handleShorten = async () => {
     if (!url.trim()) { setError("Please enter a URL"); return; }
@@ -41,11 +50,17 @@ export default function App() {
       setShortUrl(result);
       setHistory((prev) => {
         const exists = prev.find((h) => h.original === url);
+        let newHistory;
         if (exists) {
-          return [{ ...exists, short: result, time: new Date() }, ...prev.filter((h) => h.original !== url)].slice(0, 10);
+          newHistory = [{ ...exists, short: result, time: new Date() }, ...prev.filter((h) => h.original !== url)].slice(0, 10);
+        } else {
+          const newCount = totalCount + 1;
+          setTotalCount(newCount);
+          localStorage.setItem("url-count", String(newCount));
+          newHistory = [{ original: url, short: result, time: new Date() }, ...prev].slice(0, 10);
         }
-        setTotalCount((c) => c + 1);
-        return [{ original: url, short: result, time: new Date() }, ...prev].slice(0, 10);
+        localStorage.setItem("url-history", JSON.stringify(newHistory));
+        return newHistory;
       });
       setUrl("");
     } catch (err) {
@@ -88,7 +103,7 @@ export default function App() {
             </div>
           ))}
         </nav>
-        <div style={s.sidebarFooter}>🔒 API key secured</div>
+        <div style={s.sidebarFooter}> https://github.com/sanchit1804</div>
       </div>
 
       <div style={s.main}>
@@ -100,7 +115,7 @@ export default function App() {
             <div style={s.statsGrid}>
               <div style={s.stat}>
                 <div style={s.statLabel}>URLs shortened</div>
-                <div style={s.statVal}>{history.length}</div>
+                <div style={s.statVal}>{totalCount}</div>
               </div>
               <div style={s.stat}>
                 <div style={s.statLabel}>In history</div>
